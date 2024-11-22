@@ -8,23 +8,23 @@ class GetStartButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextButton(
-        onPressed: (){
-
-        },
+      onPressed: () {},
       style: ButtonStyle(
-        backgroundColor: MaterialStateProperty.all( ColorsApp.mainBlue),
+        backgroundColor: WidgetStateProperty.all(ColorsApp.mainBlue),
         tapTargetSize: MaterialTapTargetSize.shrinkWrap,
-        minimumSize: MaterialStateProperty.all(const Size(double.infinity , 52),),
-      shape: MaterialStateProperty.all(
-        RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(16),
+        minimumSize: WidgetStateProperty.all(
+          const Size(double.infinity, 52),
+        ),
+        shape: WidgetStateProperty.all(
+          RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(16),
+          ),
         ),
       ),
+      child: Text(
+        'Get Started',
+        style: TextStyles.font16WhiteNormal,
       ),
-        child: Text(
-          'Get Started',
-          style: TextStyles.font16WhiteSemiBold,
-        ),
     );
   }
 }
